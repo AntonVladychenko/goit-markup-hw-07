@@ -2,30 +2,33 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--title-dark-color);
+  color: $title-dark-color;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
+
 .aboutus-list {
   justify-content: space-between;
   display: flex;
 }
-.aboutus-title {
-  margin-top: 30px;
-}
+
 .aboutus-item {
   width: calc((100% - 90px) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 120px;
+    background-color: #f5f4fa;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
-.aboutus-item:not(:last-child) {
-  margin-right: 30px;
-}
-.aboutus-item::before {
-  content: "";
-  display: block;
-  width: 270px;
-  height: 120px;
-  background-color: #f5f4fa;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .aboutus-item:nth-child(1)::before {
   background-image: url(../img/o-nas/antenna.svg);
 }
@@ -44,9 +47,7 @@
   margin-bottom: 30px;
   background-color: #f5f4fa;
 }
-.aboutus-title {
-  margin-bottom: 10px;
-}
+
 .aboutus-text {
   line-height: 1.71;
 }

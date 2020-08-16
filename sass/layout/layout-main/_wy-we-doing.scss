@@ -17,7 +17,7 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--title-dark-color);
+  color: $title-dark-color;
   bottom: 0px;
   width: 100%;
   color: #ffffff;
@@ -30,7 +30,11 @@
 }
 .whywedoing-item {
   width: calc((100% - 60px) / 3);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.whywedoing-item:not(:last-child) {
-  margin-right: 30px;
-}
+// .whywedoing-item:not(:last-child) {
+//   margin-right: 30px;
+// }

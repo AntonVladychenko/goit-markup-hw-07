@@ -14,10 +14,12 @@
   justify-content: center;
   text-align: center;
   align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.clients-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .clients-link {
   display: flex;
   width: 170px;
@@ -28,18 +30,19 @@
   justify-content: center;
   color: #afb1b8;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: $accent-color;
+    border-color: $accent-color;
+    cursor: pointer;
+  }
 }
 
 .clients-svgdiv {
   fill: currentColor;
-}
 
-.clients-link:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  cursor: pointer;
-}
-.clients-svgdiv:hover {
-  fill: currentColor;
-  cursor: pointer;
+  &:hover {
+    fill: currentColor;
+    cursor: pointer;
+  }
 }

@@ -14,6 +14,7 @@
   opacity: 0;
   pointer-events: none;
 }
+
 .main-form {
   padding-top: 40px;
   padding-left: 40px;
@@ -23,7 +24,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  background-color: $title-white-color;
   cursor: pointer;
 }
 
@@ -37,33 +38,52 @@
   position: relative;
   padding-left: 42px;
   margin: 0;
-  cursor: pointer;
   width: 100%;
   height: 40px;
   font: inherit;
   border: 1px solid rgba(33, 33, 33, 0.2);
   cursor: pointer;
   font-size: 14px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+
+  &:focus ~ .form-label,
+  &:not(:placeholder-shown) ~ .form-label {
+    color: $accent-color;
+    transform: translateY(calc(-100% - 4px));
+    top: -10px;
+    left: -10px;
+    font-size: 12px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:focus + .form-icons {
+    fill: $accent-color;
+    border-color: 1px solid $accent-color;
+  }
 }
 
-.form-input:focus,
-.textarea-form:focus {
-  outline: none;
-  border: 1px solid var(--accent-color);
-}
+.textarea-form {
+  resize: none;
+  width: 448px;
+  padding: 12px 16px;
 
-.form-input:focus ~ .form-label,
-.form-input:not(:placeholder-shown) ~ .form-label {
-  color: var(--accent-color);
-  transform: translateY(calc(-100% - 4px));
-  top: -10px;
-  left: -10px;
-  font-size: 12px;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-input:focus + .form-icons {
-  fill: var(--accent-color);
-  border-color: 1px solid var(--accent-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: $title-dark-color;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
 }
 
 .form-title {
@@ -75,7 +95,7 @@
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: $title-dark-color;
 }
 .form-label {
   position: absolute;
@@ -92,7 +112,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 
-  color: #757575;
+  color: $title-grey-color;
 }
 .label-input {
   display: flex;
@@ -105,30 +125,14 @@
   height: 15px;
   text-align: center;
   display: inline-block;
-  border: 2px solid #212121;
+  border: 2px solid $title-dark-color;
   border-radius: 2px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 .dogovor {
   margin-left: 8px;
-  color: #2196f3;
-}
-
-.textarea-form {
-  resize: none;
-  width: 448px;
-  padding: 12px 16px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  text-transform: capitalize;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-
-  color: #212121;
+  color: $accent-color;
 }
 
 .checkbox-div {
@@ -150,20 +154,21 @@
   line-height: 1.71;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: $title-dark-color;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-}
-.checkbox-input:checked + .icon {
-  background-color: #2196f3;
-  background-image: url(../img/svg/vector.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-origin: border-box;
-  border-color: #2196f3;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:checked + .icon {
+    background-color: $accent-color;
+    background-image: url(../img/svg/vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: border-box;
+    border-color: $accent-color;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .form-icons {
@@ -171,7 +176,7 @@
 
   width: 12px;
   height: 12px;
-  fill: #212121;
+  fill: $title-dark-color;
   position: absolute;
   top: 15px;
   left: 20px;
@@ -188,22 +193,23 @@
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  color: var(--title-white-color);
+  background-color: $accent-color;
+  color: $title-white-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   border: none;
+
+  &:hover,
+  &:focus {
+    color: $title-white-color;
+    background-color: $button-hover-color;
+    cursor: pointer;
+  }
 }
 
-.btn-forma:hover,
-.btn-forma:focus {
-  color: var(--title-white-color);
-  background-color: var(--button-hover-color);
-  cursor: pointer;
-}
 .btn-closedform {
   position: absolute;
-  background-color: #ffffff;
+  background-color: $title-white-color;
   padding: 6px;
   top: 8px;
   right: 8px;
@@ -212,13 +218,13 @@
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    fill: $accent-color;
+  }
 }
 .form-icons-clouse {
-  background-color: #ffffff;
+  background-color: $title-white-color;
   width: 15px;
   height: 15px;
-}
-
-.btn-closedform:hover {
-  fill: #2196f3;
 }

@@ -8,9 +8,9 @@ html {
 }
 
 body {
-  font-family: var(--main-font);
-  background-color: var(--title-white-color);
-  color: var(--title-grey-color);
+  font-family: $main-font;
+  background-color: $title-white-color;
+  color: $title-grey-color;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.03em;

@@ -1,7 +1,14 @@
+@import "./utils/normalaize";
+@import "./utils/variables";
 @import "./base/base";
 @import "./components/conteiner";
 @import "./components/logo";
 @import "./components/captions";
-@import "./components/modal ";
-@import "./utils/var";
+@import "./components/modalka";
 @import "./layout/layout-header/navigation";
+@import "./layout/layout-main/heroe";
+@import "./layout/layout-main/about-us";
+@import "./layout/layout-main/wy-we-doing";
+@import "./layout/layout-main/us-team";
+@import "./layout/layout-main/us-clients";
+@import "./components/footer";
