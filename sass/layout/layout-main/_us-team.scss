@@ -1,0 +1,79 @@
+/* команда-фамилии */
+.subtitle-surname,
+.usteam-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+
+  color: var(--title-dark-color);
+}
+/*команда-профессии */
+.section-us-team {
+  background-color: #f5f4fa;
+}
+.us-team-title {
+  margin-bottom: 50px;
+}
+.us-team-photo {
+  margin-bottom: 30px;
+}
+.subtitle-surname {
+  margin-bottom: 10px;
+}
+.us-team-list {
+  display: flex;
+}
+.us-team-list-item {
+  display: block;
+  width: calc((100% - 90px) / 4);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+.us-team-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.usteam-text {
+  margin-bottom: 16px;
+  font-weight: 400;
+  color: var(--title-grey-color);
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+.social-list-item {
+  padding-bottom: 24px;
+}
+.sosial-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sochial-icons {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.sosial-link:hover {
+  background-color: #2196f3;
+  cursor: pointer;
+}
+.sosial-link:hover .sochial-icons {
+  fill: #ffffff;
+  cursor: pointer;
+}
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list {
+  display: flex;
+}

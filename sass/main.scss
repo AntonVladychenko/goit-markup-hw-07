@@ -1,9 +1,7 @@
-p {
-  color: red;
-}
-p {
-  color: royalblue;
-}
-p {
-  color: salmon;
-}
+@import "./base/base";
+@import "./components/conteiner";
+@import "./components/logo";
+@import "./components/captions";
+@import "./components/modal ";
+@import "./utils/var";
+@import "./layout/layout-header/navigation";
