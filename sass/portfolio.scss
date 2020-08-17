@@ -1,7 +1,8 @@
-// @import "./utils/normalaize";
+@import "./utils/normalaize";
 @import "./utils/variables";
 @import "./base/base";
 @import "./components/conteiner";
+@import "./utils/mixins";
 @import "./components/logo";
 @import "./components/captions";
 @import "./layout/layout-header/navigation";

@@ -9,9 +9,7 @@
 }
 .subtitle-surname,
 .usteam-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.18;
+  @include font(16px, 500, 1.18);
   text-align: center;
 
   color: $title-dark-color;
@@ -48,12 +46,7 @@
     margin-right: 30px;
   }
 }
-// .usteam-text {
-//   @extend %subtitlesurname-usteamtext;
-//   margin-bottom: 16px;
-//   font-weight: 400;
-//   color: $title-grey-color;
-// }
+
 .social-list {
   display: flex;
   justify-content: center;
