@@ -13,7 +13,7 @@
         "../sass/layout/layout-header/_navigation.scss",
         "../sass/portfolio-page/_btn-portfolio.scss",
         "../sass/portfolio-page/_list-picktureportfolio.scss",
-        "../sass/components/_footer.scss"
+        "../sass/portfolio-page/_footer.scss"
     ],
     "names": [],
     "file": "portfolio.css"
